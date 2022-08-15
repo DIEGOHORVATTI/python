@@ -20,3 +20,16 @@ def livros(title="The seven legends"):
   print(title)
 livros()
 livros("Linux a biblia")
+
+# parametros referencia
+def soma(x, y):
+  return(int(x+y))
+print("\n", soma(2, 2), "\n")
+
+# função anônima 
+soma = lambda x,y : x+y
+print("\n", soma(10, 10), "\n\n", ((lambda x,y : x-y)(4, 2)) )
+
+r = lambda x,func : (x+func(x))
+res = r(2, lambda x:x+3)
+print("\n", res)
